@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review Classifier</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        body.light-mode {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        body.dark-mode {
+            background-color: #212529;
+            color: #f8f9fa;
+        }
+        .result-box {
+            border: 2px solid #ced4da;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .positive {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        .negative {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        .neutral {
+            background-color: #e2e3e5;
+            border-color: #d6d8db;
+            color: #383d41;
+        }
+        .btn-rounded {
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="container d-flex flex-column align-items-center justify-content-center min-vh-100">
+        <h1 class="mb-4">Movie Review Classifier</h1>
+
+        <form id="review-form" class="w-50">
+            <div class="mb-3">
+                <label for="review" class="form-label">Enter your movie review:</label>
+                <textarea id="review" name="review" class="form-control" rows="4"></textarea>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary btn-rounded">Submit Review</button>
+                <button type="reset" class="btn btn-secondary btn-rounded">Reset</button>
+            </div>
+        </form>
+
+        <div id="result-box" class="result-box neutral w-50">
+            Classification Result: <span id="result">Neutral</span>
+        </div>
+
+        <div class="form-check form-switch mt-4">
+            <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+            <label class="form-check-label" for="darkModeSwitch">Toggle Light/Dark Mode</label>
+        </div>
+    </div>
+
+    <script>
+        // Switch between light and dark modes
+        $(document).ready(function() {
+            $('#darkModeSwitch').on('change', function() {
+                if ($(this).is(':checked')) {
+                    $('body').removeClass('light-mode').addClass('dark-mode');
+                } else {
+                    $('body').removeClass('dark-mode').addClass('light-mode');
+                }
+            });
+
+            $('#review-form').on('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                let review = $('#review').val();
+                // Use a default method or allow the server to decide
+                let method = 'default'; // Or you can remove this line entirely
+
+                $.ajax({
+                    url: '/classify',
+                    method: 'POST',
+                    data: {
+                        review: review,
+                        method: method 
+                    },
+                    success: function(response) {
+                        let resultText = response.result;
+                        $('#result').text(resultText);
+
+                        // Change result box color based on the classification
+                        if (resultText === "Positive") {
+                            $('#result-box').removeClass('negative neutral').addClass('positive');
+                        } else if (resultText === "Negative") {
+                            $('#result-box').removeClass('positive neutral').addClass('negative');
+                        } else {
+                            $('#result-box').removeClass('positive negative').addClass('neutral');
+                        }
+                    },
+                    error: function() {
+                        $('#result').text('Error in classification.');
+                        $('#result-box').removeClass('positive negative').addClass('neutral');
+                    }
+                });
+            });
+
+            // Reset result box when form is reset
+            $('#review-form').on('reset', function() {
+                $('#result').text('Neutral');
+                $('#result-box').removeClass('positive negative').addClass('neutral');
+            });
+        });
+    </script>
+</body>
+</html>
