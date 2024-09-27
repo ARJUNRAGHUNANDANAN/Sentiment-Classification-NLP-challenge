@@ -80,4 +80,7 @@ I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Cha
 *   My project included training the model, developing a client UI, hosting, and serving it. So, some fine-tuning was compromised.
 *   This was a simple experimentation. More fine-tuning should be experimented with to increase accuracy. 
 *   Should consider testing further methods like Naive Bayes and SVM.
+*   I also found it difficult to easily adjust code / libraries / training method to utilize CPU/GPU/TPU offerings of colab and kaggle correctly. So, i need to work on understanding the methods more.
 *   Try implementing Multiple Model Choosing and Multi Model Prediction as planned prior to project (with local hosting to reduce deployment cost)
+
+
