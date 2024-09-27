@@ -94,5 +94,42 @@ I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Cha
 *   Should consider testing further methods like Naive Bayes and SVM.
 *   I also found it difficult to easily adjust code / libraries / training method to utilize CPU/GPU/TPU offerings of colab and kaggle correctly. So, i need to work on understanding the methods more.
 *   Try implementing Multiple Model Choosing and Multi Model Prediction as planned prior to project (with local hosting to reduce deployment cost)
+*   Going through metrics, I noticed that the GridSearch did not find the best model while simple logistic regression did. Should go through parameters and code functions to see what went wrong. 
+
+Here is a Tabulated Datasheet incase anyone want to see. 
+
+### Multiple Model Approach  Movie Review Classification Results
+
+ Negative Reviews (Movie Reviews classified as 0)
+
+| Model                   | Test Accuracy | Precision (Negative Review) | Recall (Negative Review) | F1-Score (Negative Review) | Support (Negative Review) |
+|-------------------------|---------------|-----------------------------|--------------------------|----------------------------|---------------------------|
+| Logistic Regression      | 80.18%        | 0.80                        | 0.81                     | 0.80                       | 3704                      |
+| Best Logistic Regression | 80.12%        | 0.80                        | 0.81                     | 0.80                       | 3704                      |
+| Random Forest            | 76.31%        | 0.77                        | 0.74                     | 0.76                       | 3704                      |
+| LSTM                     | 84.55%        | 0.86                        | 0.83                     | 0.84                       | 3704                      |
+
+---
+
+ Positive Reviews (Movie Reviews classified as 1)
+
+| Model                   | Test Accuracy | Precision (Positive Review) | Recall (Positive Review) | F1-Score (Positive Review) | Support (Positive Review) |
+|-------------------------|---------------|-----------------------------|--------------------------|----------------------------|---------------------------|
+| Logistic Regression      | 80.18%        | 0.81                        | 0.80                     | 0.80                       | 3734                      |
+| Best Logistic Regression | 80.12%        | 0.81                        | 0.80                     | 0.80                       | 3734                      |
+| Random Forest            | 76.31%        | 0.75                        | 0.78                     | 0.77                       | 3734                      |
+| LSTM                     | 84.55%        | 0.83                        | 0.87                     | 0.85                       | 3734                      |
+
+---
+
+ Macro, Weighted Averages, and Total Support (Movie Reviews)
+
+| Model                   | Macro Avg Precision | Macro Avg Recall | Macro Avg F1-Score | Weighted Avg Precision | Weighted Avg Recall | Weighted Avg F1-Score | Total Support (Movie Reviews) |
+|-------------------------|---------------------|-------------------|--------------------|------------------------|--------------------|-----------------------|-------------------------------|
+| Logistic Regression      | 0.80                | 0.80              | 0.80               | 0.80                   | 0.80               | 0.80                  | 7438                          |
+| Best Logistic Regression | 0.80                | 0.80              | 0.80               | 0.80                   | 0.80               | 0.80                  | 7438                          |
+| Random Forest            | 0.76                | 0.76              | 0.76               | 0.76                   | 0.76               | 0.76                  | 7438                          |
+| LSTM                     | 0.85                | 0.85              | 0.85               | 0.85                   | 0.85               | 0.85                  | 7438                          |
+
 
 
