@@ -23,8 +23,12 @@ This github repo is used to consolidate project notebooks file, additional files
 *   Accuracy: 0.8694
 
 ### NLP Challenge using Bert (Tests only)
-
-*   Accuracy: 0.8688
+* Uses a BERT model for sentiment analysis.
+    * Epoch 1: binary_accuracy: 0.7649, val_binary_accuracy: 0.8522
+    * Epoch 2: binary_accuracy: 0.8660, val_binary_accuracy: 0.8581
+    * Epoch 3: binary_accuracy: 0.9062, val_binary_accuracy: 0.8600
+    * Epoch 4: binary_accuracy: 0.9315, val_binary_accuracy: 0.8700
+    * Epoch 5: binary_accuracy: 0.9501, val_binary_accuracy: 0.8705
 
 ### Multiple Model Approach NLP : IMDB50K (Tests only)
 
