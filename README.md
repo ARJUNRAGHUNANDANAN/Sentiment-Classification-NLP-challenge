@@ -18,19 +18,26 @@ This github repo is used to consolidate project notebooks file, additional files
 
 ## Prediction Summary
 
-### Fellowship.AI NLP Challenge: IMDB50K : TF-text (Submission)
+### Fellowship.AI NLP Challenge: IMDB50K : TF-text 
+* Uses tensorflow-text & Bert for sentiment analysis.
+    * Epoch 1: binary_accuracy: 0.7663, val_binary_accuracy: 0.8507
+    * Epoch 2: binary_accuracy: 0.8665, val_binary_accuracy: 0.8555
+    * Epoch 3: binary_accuracy: 0.9062, val_binary_accuracy: 0.8705
+    * Epoch 4: binary_accuracy: 0.9336, val_binary_accuracy: 0.8684
+    * Epoch 5: binary_accuracy: 0.9487, val_binary_accuracy: 0.8717
+    * Eval :  **Loss = 0.4476686418056488, Accuracy = 0.8694000244140625**
 
-*   Accuracy: 0.8694
 
-### NLP Challenge using Bert (Tests only)
+### NLP Challenge using Bert 
 * Uses a BERT model for sentiment analysis.
     * Epoch 1: binary_accuracy: 0.7649, val_binary_accuracy: 0.8522
     * Epoch 2: binary_accuracy: 0.8660, val_binary_accuracy: 0.8581
     * Epoch 3: binary_accuracy: 0.9062, val_binary_accuracy: 0.8600
     * Epoch 4: binary_accuracy: 0.9315, val_binary_accuracy: 0.8700
     * Epoch 5: binary_accuracy: 0.9501, val_binary_accuracy: 0.8705
+    * Eval : **Loss: 0.4606824815273285, Accuracy: 0.8679999709129333**
 
-### Multiple Model Approach NLP : IMDB50K (Tests only)
+### Multiple Model Approach NLP : IMDB50K 
 
 *   **simple_logistic_model** 
     *   Test Accuracy: 80.18%
@@ -81,7 +88,8 @@ I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Cha
 
 ## Future Improvements
 
-*   My project included training the model, developing a client UI, hosting, and serving it. So, some fine-tuning was compromised.
+*   The high loss value indicates overfitting, so I need to use some adding more regularization, drop out layers or early stopping methods or try something else entirely. 
+*   Since my project plan included training the model, developing a client UI, hosting, and serving demo. So, some fine-tuning was compromised.
 *   This was a simple experimentation. More fine-tuning should be experimented with to increase accuracy. 
 *   Should consider testing further methods like Naive Bayes and SVM.
 *   I also found it difficult to easily adjust code / libraries / training method to utilize CPU/GPU/TPU offerings of colab and kaggle correctly. So, i need to work on understanding the methods more.
