@@ -147,9 +147,43 @@ TL;DR:
    * Recall (Negative)
    * f1-scores
   
- Higher numbers are better
+Higher numbers are better
+
+Final Takes : I did this project as a submission for fellowship AI. But, after developing the project, I decided to not proceed with my application because the ML Fellow position is a 4 month long Unpaid Fellowship Program will a Full-Time Commitment requirement. I definitely cannot afford to do an unpaid internship at the moment. I need a paid job.
+
+Job titles
+![Machine Learning Engineer](https://img.shields.io/badge/Machine_Learning_Engineer-blue?style=flat-square)
+![Generative AI Engineer](https://img.shields.io/badge/Generative_AI_Engineer-blue?style=flat-square)
+![Software Engineer](https://img.shields.io/badge/Software_Engineer-blue?style=flat-square)
+
+Location types
+![On-site](https://img.shields.io/badge/On--site-green?style=flat-square)
+![Hybrid](https://img.shields.io/badge/Hybrid-green?style=flat-square)
+![Remote](https://img.shields.io/badge/Remote-green?style=flat-square)
+
+Locations (on-site)
+![Kerala, India](https://img.shields.io/badge/Kerala_India-orange?style=flat-square)
+![Tamil Nadu, India](https://img.shields.io/badge/Tamil_Nadu_India-orange?style=flat-square)
+![Karnataka, India](https://img.shields.io/badge/Karnataka_India-orange?style=flat-square)
+![Maharashtra, India](https://img.shields.io/badge/Maharashtra_India-orange?style=flat-square)
+
+Locations (remote)
+![India](https://img.shields.io/badge/India-orange?style=flat-square)
+![United States](https://img.shields.io/badge/United_States-orange?style=flat-square)
+![United Kingdom](https://img.shields.io/badge/United_Kingdom-orange?style=flat-square)
+
+Start date
+![Immediately](https://img.shields.io/badge/Immediately-red?style=flat-square)
+![Actively applying](https://img.shields.io/badge/Actively_Applying-red?style=flat-square)
+
+Employment types
+![Full-time](https://img.shields.io/badge/Full--time-purple?style=flat-square)
+![Part-time](https://img.shields.io/badge/Part--time-purple?style=flat-square)
+![Contract](https://img.shields.io/badge/Contract-purple?style=flat-square)
+![Paid Internship](https://img.shields.io/badge/Paid_Internship-purple?style=flat-square)
+![Temporary](https://img.shields.io/badge/Temporary-purple?style=flat-square)
 
 
-<< ----- The End ----- >>
+<< ----- Proceeding to explore what cool projects I can do till then.  The End ----- >>
 
 
