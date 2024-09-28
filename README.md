@@ -75,7 +75,10 @@ Some notebooks were tested in Google Colab and are not included here or in submi
 
 ![Final UI Working Negative](webapp/Final-UI-Working-Negative.jpg) 
 
+### Model Deployment 
 I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Challenge: IMDB50K : TF-text' to reduce GCP Deployment cost. 
+![Vertex AI Classification Model Endpoint](deployment/deployment.jpg) 
+Not hosting a Live Preview to avoid Usage Cost(I undeployed after testing) [Vertex AI Pricing](https://cloud.google.com/vertex-ai/pricing#custom-trained_models).
 
 ## About the Data
 
