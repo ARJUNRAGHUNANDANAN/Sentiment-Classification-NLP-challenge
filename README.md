@@ -134,5 +134,19 @@ Here is a Tabulated Datasheet incase anyone want to see.
 | Random Forest            | 0.76                | 0.76              | 0.76               | 0.76                   | 0.76               | 0.76                  | 7438                          |
 | LSTM                     | 0.85                | 0.85              | 0.85               | 0.85                   | 0.85               | 0.85                  | 7438                          |
 
+What does that mean?
+TL;DR: 
+* Look for :
+   * Test Accuracy
+   * Precision (Positive)
+   * Recall (Positive)
+   * Precision (Negative)
+   * Recall (Negative)
+   * f1-scores
+  
+ Higher numbers are better
+
+
+<< ----- The End ----- >>
 
 
