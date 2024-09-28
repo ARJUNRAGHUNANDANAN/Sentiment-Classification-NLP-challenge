@@ -4,17 +4,17 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)](https://www.tensorflow.org/)
 [![TensorFlow Text](https://img.shields.io/badge/TensorFlow%20Text-latest-yellowgreen)](https://www.tensorflow.org/text)
 
-A Fellowship.AI Code Challenge Submission by @arjunraghunandanan
-
 [www.arjunraghunandanan.com](https://www.arjunraghunandanan.com/) | September 2024
 
 This github repo is used to consolidate project notebooks file, additional files and documents related to the project for submission. 
 
 ## Project Overview
 
-* This project focuses on sentiment analysis of movie reviews using the IMDB dataset. 
+* This project focuses on sentiment analysis of movie reviews using the IMDB dataset.
+* Generated a ML model that classifies movie reviews to Positive / Negative.
 * Multiple approaches were tested.
-* Project includes a deploying to GCP and testing with End User Web App. (clear documentation pending.)
+* Project includes a deploying to GCP and testing with End User Web App.
+* This project is part of a Fellowship.AI Code Challenge Submission by me.
 
 ## Prediction Summary
 
@@ -62,7 +62,7 @@ This github repo is used to consolidate project notebooks file, additional files
 
 [![Secondary Notebooks](https://img.shields.io/badge/Secondary_Notebooks-Multiple_Model_Approach_NLP_:_IMDB50K-green)](https://www.kaggle.com/code/arjunraghunandanan/multiple-model-approach-nlp-imdb50k)
 
-Some notebooks were tested in colab and are not included here or in submission. 
+Some notebooks were tested in Google Colab and are not included here or in submission. 
 
 ## Simple Web App Interface
 ###  UI Planned Before Development (Mock-Up)
@@ -75,7 +75,7 @@ Some notebooks were tested in colab and are not included here or in submission.
 
 ![Final UI Working Negative](webapp/Final-UI-Working-Negative.jpg) 
 
-I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Challenge: IMDB50K : TF-text' to reduce GCP Deployment cost.
+I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Challenge: IMDB50K : TF-text' to reduce GCP Deployment cost. 
 
 ## About the Data
 
@@ -94,7 +94,10 @@ I skipped Multiple Model Method and only using model from 'Fellowship.AI NLP Cha
 *   Should consider testing further methods like Naive Bayes and SVM.
 *   I also found it difficult to easily adjust code / libraries / training method to utilize CPU/GPU/TPU offerings of colab and kaggle correctly. So, i need to work on understanding the methods more.
 *   Try implementing Multiple Model Choosing and Multi Model Prediction as planned prior to project (with local hosting to reduce deployment cost)
-*   Going through metrics, I noticed that the GridSearch did not find the best model while simple logistic regression did. Should go through parameters and code functions to see what went wrong. 
+*   Going through metrics, I noticed that the GridSearch did not find the best model while simple logistic regression did. Should go through parameters and code functions to see what went wrong.
+*   I used Vertex AI Endpoint Deployment method to test the model prediction using endpoint calling which worked. (refer webapp/app.py for code)
+*   Since I used tensorflow-text 2.13.1 instead of tensorflow, it needs its environments
+*   While I did experiment with hosting a live preview on Streamlit Cloud, the 100+ Mb model files were causing issues with getting the model onto Github and st.cache() issues. Will sort this out on a later project. 
 
 Here is a Tabulated Datasheet incase anyone want to see. 
 
